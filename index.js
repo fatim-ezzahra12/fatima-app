@@ -13,6 +13,8 @@ app.get("/apps/fatima-pwn", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("🔥 App Proxy listener is running on port 3000");
+// ✅ هاد السطر مهم باش Railway يعرف البورت
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`🔥 App Proxy listener is running on port ${port}`);
 });
